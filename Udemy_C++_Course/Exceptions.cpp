@@ -8,9 +8,9 @@ void mightGoWrong(){
 	bool error = true;
 	bool error2 = true;
 
-	if (error) {
+	/*if (error) {
 		throw "Something went wrong. ";
-	}
+	}*/
 
 	if (error2) {
 		throw string("Something else went wrong."); //Use the class name to create an object
