@@ -17,6 +17,15 @@ void mightGoWrong(){
 	}
 }
 
+class CanGoWrong {
+public:
+	CanGoWrong() {
+		char* pMemory = new char[9999999];
+		delete[] pMemory;
+	}
+};
+
+
 int main() {
 	try {
 		mightGoWrong();
@@ -32,5 +41,13 @@ int main() {
 	}
 
 	cout << "Still running" << endl;
+	try {
+		CanGoWrong wrong;
+	}
+	catch (bad_alloc& e) {
+		cout << "Caught exception: " << e.what() << endl; 
+	}
+	
+
 	return 0;
 }
